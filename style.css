@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* light gray background */
+  }
+  
+  #top {
+    width: 80%; /* make the div take up 80% of the page width */
+    margin: 20px auto; /* add some margin to center the div */
+    padding: 0px; /* add some padding to make the content breathe */
+    background-color: #fff; /* white background for the div */
+    border: 1px solid #ddd; /* light gray border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add some subtle shadow */
+    text-align: center;
+    margin-bottom: 0px;
+}
+  
+#gameTitle {
+    color: #333; /* dark gray text color */ 
+    text-align: center; /* center the heading */
+    font-size: 50px;
+    font-family: 'Roboto';
+    font-weight:900;
+    margin-bottom: 20px;
+}
+
+#desc {
+    font-family: 'Montserrat';
+    display: block;
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #333 ;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+
+  }
+
+  .box1 {
+    width: 100px;
+    height: 100px;
+    padding: 100px;
+    background-color: #efce16;
+    border: 10px solid #303030;
+    margin: 50px;
+}
+
+  .box2 {
+    width: 100px;
+    height: 100px;
+    padding: 100px;
+    background-color: #0b55de;
+    border: 10px solid #303030;
+    margin: 50px;
+  }
+
+  .box3 {
+    width: 100px;
+    height: 100px;
+    padding: 100px;
+    background-color: #e22e2e;
+    border: 10px solid #303030;
+    margin: 50px;
+  }
+
+  button[type="start"] {
+    width: 300px;
+    height: 100px; 
+    padding: 20px;
+    font-size: 40px;
+    font-family: 'Montserrat';
+    background-color: #529466;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border: 10px solid #303030;
+}
+
+button[type="start"]:hover {
+    background-color: #59845a;
+}
+
