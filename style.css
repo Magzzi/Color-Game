@@ -86,3 +86,41 @@ button[type="start"]:hover {
     background-color: #59845a;
 }
 
+#footer1 {
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+
+#footer1 p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #303030;
+}
+
+#footer1 a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+#footer1 a:hover {
+  color: #555;
+}
+
+#footer1 img {
+  vertical-align: middle;
+  margin-top: 10px;
+  transition: transform 0.3s;
+}
+
+#footer1 img:hover {
+  transform: scale(1.1);
+}

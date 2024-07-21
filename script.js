@@ -15,16 +15,24 @@ function randomIntFromInterval(min, max) {
 function countdown(event) {
     event.preventDefault();
 
+    // Play the countdown audio
+    const audio = document.getElementById("countdownAudio");
+    audio.play();
+
+    randomizeColor();
+    const colorInterval = setInterval(randomizeColor, 200);
+
     let count = 3;
     const countdownInterval = setInterval(function() {
         if (count >= 1) {
             button.innerText = count;
+            randomizeColor();
             count--;
         } else {
             clearInterval(countdownInterval);
+            clearInterval(colorInterval);
             button.innerText = "Start";
 
-            randomizeColor();
         }
     }, 750); // Countdown every /3 second
 }
