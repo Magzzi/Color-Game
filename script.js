@@ -1,4 +1,5 @@
 const button = document.getElementById("start");
+const musicbutton = document.getElementById("volume")
 const red = "#e22e2e";
 const blue = "#0b55de";
 const yellow = "#efce16";
@@ -6,18 +7,34 @@ const white = "#ffffff";
 const purple = "#8a2be2";
 const green = "#3cb371";
 
+
+
 const colors = [red, blue, yellow, white, purple, green];
+
+
+
 
 function randomIntFromInterval(min, max) { 
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
 
 function countdown(event) {
     event.preventDefault();
 
     // Play the countdown audio
     const audio = document.getElementById("countdownAudio");
-    audio.play();
+    
+
+    
+    sleep(500).then(() => audio.play());
+  
+    
+
 
     randomizeColor();
     const colorInterval = setInterval(randomizeColor, 200);
@@ -31,10 +48,10 @@ function countdown(event) {
         } else {
             clearInterval(countdownInterval);
             clearInterval(colorInterval);
-            button.innerText = "Start";
+            sleep(500).then(() => button.innerText = "Try Again");
 
         }
-    }, 750); // Countdown every /3 second
+    }, 800); // Countdown every /3 second
 }
 
 
@@ -51,4 +68,23 @@ function randomizeColor() {
     }
 }
 
+function adjustMusic(event){
+    event.preventDefault();
+    const bg = document.getElementById("backgroundMusic");
+    
+
+    if (bg.paused || bg.volume == 0) {
+        bg.play();
+        bg.volume = 0.1;
+        musicbutton.querySelector('img').src = 'images/onvolume.png';
+    } else {
+        bg.volume = 0;
+        musicbutton.querySelector('img').src = 'images/mutevolume.png';
+    }
+}
+
 button.addEventListener('click', countdown);
+musicbutton.addEventListener('click', adjustMusic)
+
+
+
