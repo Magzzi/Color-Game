@@ -47,7 +47,7 @@ function countdown(event) {
             clearInterval(countdownInterval);
             clearInterval(colorInterval);
             sleep(800).then(() => button.innerText = "Start");
-            button.disabled = false;
+            sleep(1000).then(() =>button.disabled = false);
 
         }
     }, 800); // Countdown every /3 second

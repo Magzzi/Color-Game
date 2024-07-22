@@ -102,7 +102,7 @@ body {
     cursor: pointer;
     display: block;
     margin: 0 auto;
-    border: 10px solid #303030;
+    border: 5px solid #323232;
 }
 
 button[type="start"]:hover {
