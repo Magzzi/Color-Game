@@ -26,16 +26,14 @@ function sleep(ms) {
 function countdown(event) {
     event.preventDefault();
 
+    if (button.disabled) return; // Prevent multiple clicks
+    button.disabled = true; // Disable button
+
     // Play the countdown audio
     const audio = document.getElementById("countdownAudio");
     
-
-    
     sleep(500).then(() => audio.play());
   
-    
-
-
     randomizeColor();
     const colorInterval = setInterval(randomizeColor, 200);
 
@@ -48,7 +46,8 @@ function countdown(event) {
         } else {
             clearInterval(countdownInterval);
             clearInterval(colorInterval);
-            sleep(500).then(() => button.innerText = "Try Again");
+            sleep(800).then(() => button.innerText = "Start");
+            button.disabled = false;
 
         }
     }, 800); // Countdown every /3 second
