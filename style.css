@@ -7,12 +7,14 @@ body {
     position: relative;
     width: 80%; /* make the div take up 80% of the page width */
     margin: 20px auto; /* add some margin to center the div */
-    padding: 0px; /* add some padding to make the content breathe */
-    background-color: #fff; /* white background for the div */
+    padding: 10px; /* add some padding to make the content breathe */
+    /* background-color: #fff; /* white background for the div */
+    background-image: linear-gradient(to right, rgba(244, 162, 97, 0.8), rgba(255, 197, 45, 0.8));
     border: 1px solid #ddd; /* light gray border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add some subtle shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* add some subtle shadow */
     text-align: center;
     margin-bottom: 0px;
+    border-radius: 20px;
 }
 
 
@@ -59,7 +61,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 0px;
-
+    margin-bottom: 0px;
   }
 
   .box1 {
@@ -91,10 +93,11 @@ body {
 
   button[type="start"] {
     width: 300px;
-    height: 100px; 
-    padding: 20px;
+    height: 80px; 
+    padding: 10px;
     font-size: 40px;
     font-family: 'Montserrat';
+    font-weight: 300;
     background-color: #529466;
     color: white;
     border: none;
@@ -103,6 +106,8 @@ body {
     display: block;
     margin: 0 auto;
     border: 5px solid #323232;
+    margin-top: 0px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.750);
 }
 
 button[type="start"]:hover {
